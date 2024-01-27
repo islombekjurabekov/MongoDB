@@ -45,9 +45,7 @@ func init() {
 
 func main() {
 	defer client.Disconnect(ctx)
-
 	basePath := server.Group("v1")
 	userController.RegisterUserRoutes(basePath)
-
 	log.Fatal(server.Run(":3000"))
 }
